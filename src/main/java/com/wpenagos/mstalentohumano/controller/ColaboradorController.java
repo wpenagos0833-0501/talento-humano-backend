@@ -17,7 +17,13 @@ public class ColaboradorController {
     @Autowired
     private ColaboradorRepository colaboradorRepository;
 
-    @PostMapping
+    @PostMecho "# talento-humano-backend" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/wpenagos0833-0501/talento-humano-backend.git
+    git push -u origin mainapping
     public Colaborador crearColaborador(@RequestBody Colaborador colaborador){
         return colaboradorRepository.save(colaborador);
 
