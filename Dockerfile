@@ -2,6 +2,8 @@
 FROM eclipse-temurin:21-jdk-alpine AS build
 COPY . .
 RUN ./mvnw clean package -DskipTests
+RUN chmod +x mvnw
+
 
 # Etapa 2: Ejecutar
 FROM eclipse-temurin:21-jdk-alpine
