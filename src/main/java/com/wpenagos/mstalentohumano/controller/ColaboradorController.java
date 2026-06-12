@@ -1,6 +1,5 @@
 package com.wpenagos.mstalentohumano.controller;
 
-
 import com.wpenagos.mstalentohumano.model.Colaborador;
 import com.wpenagos.mstalentohumano.repository.ColaboradorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,28 +16,21 @@ public class ColaboradorController {
     @Autowired
     private ColaboradorRepository colaboradorRepository;
 
-    @PostMecho "# talento-humano-backend" >> README.md
-    git init
-    git add README.md
-    git commit -m "first commit"
-    git branch -M main
-    git remote add origin https://github.com/wpenagos0833-0501/talento-humano-backend.git
-    git push -u origin mainapping
+    @PostMapping
     public Colaborador crearColaborador(@RequestBody Colaborador colaborador){
         return colaboradorRepository.save(colaborador);
-
     }
 
     @GetMapping
-     public List<Colaborador> listarColaboradores(){
+    public List<Colaborador> listarColaboradores(){
         return colaboradorRepository.findAll();
     }
 
     @GetMapping("/{id}")
     public Colaborador buscarporId(@PathVariable Long id){
         return colaboradorRepository.findById(id).orElse(null);
-
     }
+
     @DeleteMapping("/{id}")
     public void eliminarcolaborador(@PathVariable long id){
         colaboradorRepository.deleteById(id);
@@ -64,12 +56,7 @@ public class ColaboradorController {
 
         return null;
     }
-
-
-
-    }
-
-
+}
 
 
 
